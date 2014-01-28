@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: dn261290kam
@@ -8,18 +9,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Добавить сотрудника</title>
+    <title><spring:message code="createEmployee" /></title>
 </head>
 <body>
 <h1>Добавление сотрудника</h1>
 
 <form action="${pageContext.request.contextPath}/employee/add" method="post">
-    <label>Имя</label>
+    <label><spring:message code="firstName" /></label>
     <input type="text" name="first" /> <br/>
-    <label>Фамилия</label>
+    <label><spring:message code="lastName" /></label>
     <input type="text" name="last" /> <br/>
     <input type="hidden" name="department" value="${department}" /> <br/>
-    <input type="submit" value="Отправить"/>
+    <input type="submit" value="<spring:message code="send" />"/>
 </form>
 </body>
 </html>
