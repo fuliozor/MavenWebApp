@@ -1,0 +1,7 @@
+div#content div.employee {
+    clear: both;
+}
+
+div#content div.employe div {
+    float: left;
+}
