@@ -18,7 +18,7 @@
     <input type="text" name="first" /> <br/>
     <label>Фамилия</label>
     <input type="text" name="last" /> <br/>
-    <input type="text" name="department" value="${department}" /> <br/>
+    <input type="hidden" name="department" value="${department}" /> <br/>
     <input type="submit" value="Отправить"/>
 </form>
 </body>

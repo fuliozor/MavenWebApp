@@ -2,10 +2,10 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title></title>
+    <title>Список сотрудников</title>
 </head>
 <body>
-<h1>Список департаментов</h1>
+<h1>Список сотрудников</h1>
 
 <c:choose>
     <c:when test="${employees.size() == 0}">
@@ -14,13 +14,13 @@
     <c:when test="${employees.size() > 0}">
         <table border="1">
             <tr>
-                <td>ID</td>
                 <td>Имя</td>
+                <td>Фамилия</td>
             </tr>
             <c:forEach items="${employees}" var="employee">
                 <tr>
-                    <td>${employee.getId()}</td>
                     <td>${employee.getFirstName()}</td>
+                    <td>${employee.getLastName()}</td>
                 </tr>
             </c:forEach>
         </table>

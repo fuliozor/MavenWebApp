@@ -8,8 +8,8 @@
 
 
     <http access-denied-page="/">
-        <!--<intercept-url pattern="/" access="ROLE_USER,ROLE_ANONYMOUS"/>-->
-        <intercept-url pattern="/" access="ROLE_USER"/>
+        <intercept-url pattern="/" access="ROLE_ANONYMOUS"/>
+        <intercept-url pattern="/index*" access="ROLE_USER"/>
         <form-login login-page="/login.jsp" default-target-url="/" authentication-failure-url="/login.jsp?error=true"/>
         <logout logout-url="/logout" logout-success-url="/"/>
         <anonymous username="guest" granted-authority="ROLE_ANONYMOUS"/>
